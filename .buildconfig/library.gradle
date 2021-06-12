@@ -1,0 +1,40 @@
+ext {
+    //versions
+    supportVersion = '1.0.2'
+    koinVersion = '2.0.1'
+    okhttp3InterceptorVersion = '3.12.10'
+    lifecycleVersion = '2.2.0'
+    retrofitVersion = '2.6.0'
+    retrofitGsonVersion = '2.5.0'
+    gsonVersion = '2.8.2'
+
+
+    //packages
+    supportPackage = 'androidx'
+    koinPackage = 'org.koin'
+    okhttp3Package = 'com.squareup.okhttp3'
+    lifecyclePackage = 'androidx.lifecycle'
+    retrofitPackage = 'com.squareup.retrofit2'
+    gsonPackage = 'com.google.code.gson'
+
+    repositoryDependencies = [
+            core            : buildDependency(addPackage(supportPackage, 'core'), 'core-ktx', supportVersion),
+            koin            : buildDependency(koinPackage, 'koin-androidx-viewmodel', koinVersion),
+            okhttp3Interceptor: buildDependency(okhttp3Package, 'logging-interceptor', okhttp3InterceptorVersion),
+            livedata: buildDependency(lifecyclePackage, 'lifecycle-livedata-ktx', lifecycleVersion),
+            viewmodel: buildDependency(lifecyclePackage, 'lifecycle-viewmodel-ktx', lifecycleVersion),
+
+            retrofit       : buildDependency(retrofitPackage, 'retrofit', retrofitVersion),
+            retrofitAdapter: buildDependency(retrofitPackage, 'adapter-rxjava', retrofitVersion),
+            retrofitGson   : buildDependency(retrofitPackage, 'converter-gson', retrofitGsonVersion),
+            gson           : buildDependency(gsonPackage, 'gson', gsonVersion)
+    ]
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}
+
+static String addPackage(String pack, String add) {
+    return "${pack}.${add}"
+}

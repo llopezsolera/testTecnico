@@ -1,0 +1,5 @@
+include ':entity'
+include ':usecase'
+include ':repository'
+include ':app'
+rootProject.name = "appPruebaIndra"
