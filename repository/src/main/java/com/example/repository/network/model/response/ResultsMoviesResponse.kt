@@ -6,17 +6,17 @@ import java.io.Serializable
 data class ResultsMoviesResponse (
     var adult: Boolean? = false,
     var backdrop_path: String? = "",
-    var genre_ids: List<Int>? = arrayListOf(),
+    //var genre_ids: List<Int>? = arrayListOf(),
     var id: Int? = 0,
     var original_language: String? = "",
     var original_title: String? = "",
     var overview: String? = "",
-    var popularity: Int? = 0,
+    var popularity: Double? = 0.0,
     var poster_path: String? = "",
     var release_date: String? = "",
     var title: String? = "",
     var video: Boolean? = false,
-    var vote_average: Int? = 0,
+    var vote_average: Double? = 0.0,
     var vote_count: Int? = 0
 ) : Serializable {
     companion object {
@@ -24,7 +24,7 @@ data class ResultsMoviesResponse (
             return ResultsMovies(
                 adult = response.adult,
                 backdrop_path = response.backdrop_path,
-                genre_ids = response.genre_ids,
+                //genre_ids = response.genre_ids,
                 id = response.id,
                 original_language = response.original_language,
                 original_title = response.original_title,

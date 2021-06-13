@@ -3,6 +3,7 @@ package com.example.apppruebaindra.ui.Movies.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.apppruebaindra.ui.Movies.MainActivity.Companion.TOTAL_PAGES
 import com.example.entity.DataMovies
 import com.example.entity.ResultsMovies
 import com.example.usecase.repository.network.OperationResult
@@ -34,6 +35,7 @@ class MoviesViewModel(private val moviesUseCase: MoviesUseCase): ViewModel() {
                     if (result.data?.results.isNullOrEmpty()) {
                         _isEmptyList.postValue(true)
                     } else {
+                        TOTAL_PAGES =  result?.data?.total_pages ?: 0
                         moviesLiveData.value = result?.data?.results ?: arrayListOf()
                     }
                 }

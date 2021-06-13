@@ -8,7 +8,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface AppApi {
-    @GET("${BuildConfig.BASE_URL}upcoming")
+    @GET("${BuildConfig.BASE_URL}movie/upcoming")
     suspend fun getMovies(
         @Query("page") page: String,
         @Query("api_key") apiKey: String
