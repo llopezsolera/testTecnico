@@ -8,6 +8,7 @@ ext {
     retrofitGsonVersion = '2.5.0'
     gsonVersion = '2.8.2'
     glideVersion = '4.9.0'
+    lottieVersion = '3.4.0'
 
     //packages
     supportPackage = 'androidx'
@@ -17,11 +18,13 @@ ext {
     retrofitPackage = 'com.squareup.retrofit2'
     gsonPackage = 'com.google.code.gson'
     glidePackage = 'com.github.bumptech.glide'
+    lottiePackage = 'com.airbnb.android'
 
     presentationDependencies = [
             glide              : buildDependency(glidePackage, 'okhttp3-integration', glideVersion),
             glideAnnotations   : buildDependency(glidePackage, 'annotations', glideVersion),
             glideCompiler      : buildDependency(glidePackage, 'compiler', glideVersion),
+            lottie      : buildDependency(lottiePackage, 'lottie', lottieVersion),
             ]
 
     repositoryDependencies = [

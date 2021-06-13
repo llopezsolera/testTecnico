@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.apppruebaindra">
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".application.AppApplication"
         android:allowBackup="true"
@@ -11,11 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppPruebaIndra">
+        <!--<activity
+            android:name=".ui.Movies.DetailMovie2Activity"
+            android:label="@string/title_activity_detail_movie2"
+            android:theme="@style/AppPruebaIndra.NoActionBar"></activity>-->
+        <activity android:name=".ui.Movies.DetailMovieActivity" />
+        <!--
         <activity
             android:name=".ui.Movies.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_login"></activity>
-
-        <activity android:name=".ui.login.LoginActivity">
+        -->
+        <activity
+            android:name=".ui.Movies.DetailMovie2Activity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
