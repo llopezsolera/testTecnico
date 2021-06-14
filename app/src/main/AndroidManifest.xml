@@ -13,19 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppPruebaIndra">
-        <!--<activity
+        <activity
             android:name=".ui.Movies.DetailMovie2Activity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_detail_movie2"
-            android:theme="@style/AppPruebaIndra.NoActionBar"></activity>-->
+            android:theme="@style/AppPruebaIndra.NoActionBar"></activity>
         <activity android:name=".ui.Movies.DetailMovieActivity" />
-        <!--
         <activity
             android:name=".ui.Movies.MainActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_login"></activity>
-        -->
         <activity
-            android:name=".ui.Movies.DetailMovie2Activity"
+            android:name=".ui.login.LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

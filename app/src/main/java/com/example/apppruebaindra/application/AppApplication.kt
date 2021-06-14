@@ -1,8 +1,11 @@
 package com.example.apppruebaindra.application
 
 import android.app.Application
+import androidx.room.Room
 import com.example.apppruebaindra.di.viewModulesModule
 import com.example.repository.BuildConfig
+import com.example.repository.bd.MoviesDB
+import com.example.repository.bd.dao.ResultMovieDao
 import com.example.repository.network.di.networkModule
 import com.example.repository.network.di.retrofitModule
 import com.example.repository.network.utils.BASE_URL

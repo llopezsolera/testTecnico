@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import androidx.core.content.ContextCompat
 import com.example.apppruebaindra.R
 import com.google.android.material.snackbar.Snackbar
@@ -36,6 +37,16 @@ abstract class BaseAppCompat: AppCompatActivity() {
         val intent = Intent(this, activity)
         intent.putExtras(bundle)
         this.startActivity(intent)
+        if (!notDestroy) {
+            this.finish()
+        }
+    }
+
+
+    protected fun nextDataTransitionAnimation(activity: Class<*>, bundle: Bundle, options: ActivityOptionsCompat, notDestroy: Boolean) {
+        val intent = Intent(this, activity)
+        intent.putExtras(bundle)
+        startActivity(intent, options.toBundle())
         if (!notDestroy) {
             this.finish()
         }
